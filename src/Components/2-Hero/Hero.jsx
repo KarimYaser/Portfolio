@@ -12,7 +12,7 @@ function Hero() {
             animate={{ transform: "scale(1.1)" }}
             transition={{ damping: 7, type: "spring", stiffness: 100 }}
             className="avatar "
-            src="../../../public/me.jpg"
+            src="https://res.cloudinary.com/dj841loep/image/upload/v1707348455/me_gu7a6d.png"
             alt=""
           />
           <div className="icon-verified"></div>
@@ -32,10 +32,42 @@ function Hero() {
           techniques
         </p>
         <div className="icons flex">
-          <div className="icon icon-x"></div>
-          <div className="icon icon-instagram"></div>
-          <div className="icon icon-github"></div>
-          <div className="icon icon-linkedin-square"></div>
+          <div
+            className="icon icon-x"
+            onClick={() => {
+              window.open(
+                "https://x.com/karim___yasser?s=21&t=3W5COzUkHFZ-zLzSH9wmYw",
+                "_blank"
+              );
+            }}
+          ></div>
+          <div
+            className="icon icon-instagram"
+            onClick={() => {
+              window.open(
+                "https://www.instagram.com/karim__yasser?igsh=OGhlMXY5aTJ3NG9t&utm_source=qr",
+                "_blank"
+              );
+            }}
+          ></div>
+          <div
+            className="icon icon-github"
+            onClick={() => {
+              window.open(
+                "https://github.com/KarimYaser?tab=repositories",
+                "_blank"
+              );
+            }}
+          ></div>
+          <div
+            className="icon icon-linkedin-square"
+            onClick={() => {
+              window.open(
+                "https://www.linkedin.com/in/karim-yasser-ab5470292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+                "_blank"
+              );
+            }}
+          ></div>
         </div>
       </div>
       <div className="right animation">
