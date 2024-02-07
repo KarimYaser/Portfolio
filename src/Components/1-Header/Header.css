@@ -1,0 +1,163 @@
+/* 
+Table of contents
+
+1. header design
+2. Icon Button
+3. popup
+4. Responsive
+*/
+
+/* header design */
+
+
+header.flex {
+    justify-content: space-between;
+    padding: 0 2.4rem;
+    margin: 20px auto 0px auto;
+}
+
+header.flex nav {
+    background-color: var(--bgHeader);
+    padding: .77rem 1.6rem;
+    margin: 0 auto;
+    border-radius: 55px;
+    box-shadow: 1px 1px 40px rgba(49, 48, 48, 0.292);
+}
+
+header ul.flex {
+    gap: 16px;
+}
+
+header ul li a {
+    color: var(--title);
+    opacity: .9;
+    font-size: .88rem;
+    font-weight: bold;
+}
+
+header ul li a:hover {
+    color: var(--title);
+    opacity: 1;
+    font-size: .9rem;
+    font-weight: bold;
+    color: var(--blue);
+}
+
+header button {
+    font-size: 1.2rem;
+    /* margin-top: 14px; */
+}
+
+header .menu {
+    display: none;
+    background-color: transparent;
+}
+
+
+
+/* Icon Button */
+
+header .icon-moon-o,
+header .icon-menu,
+header .icon-clear,
+header .icon-sun {
+    background-color: var(--border);
+    padding: 10px;
+    border-radius: 50%;
+    color: var(--subtitle);
+    border: 1px solid rgba(244, 165, 96, 0.249);
+}
+
+header .icon-moon-o:hover,
+header .icon-menu:hover {
+    color: var(--title);
+    border: 1px solid rgba(244, 165, 96, 0.9);
+    transition: 0.3s;
+}
+
+header .icon-clear:hover {
+    color: crimson;
+    font-size: 1.6rem;
+    transition: 0.3s;
+    animation: rotate 1s ease-in-out forwards;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* popup */
+
+header .fixed {
+    position: fixed;
+    /* top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; */
+    inset: 0;
+    z-index: 11;
+    background-color: rgba(40, 40, 48, 0.91);
+    /* filter: blur(8px) */
+    backdrop-filter: blur(3px);
+}
+
+header .fixed ul.model {
+    animation: scale 1s ease-in-out forwards;
+    width: 85%;
+    margin: 2rem auto 0 auto;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    background-color: var(--secondary);
+}
+
+
+@keyframes scale {
+    0% {
+        transform: scale(0);
+    }
+
+    60% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+header .fixed ul.model li {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: .77rem;
+    padding-top: 0.5rem;
+}
+
+header .fixed ul.model li:first-child {
+    text-align: right;
+    padding-bottom: 0;
+    padding-top: 0.2rem;
+}
+
+header .fixed ul.model li:last-child,
+header .fixed ul.model li:first-child {
+    border: none;
+}
+
+
+
+/* Responsive */
+
+@media(max-width:700px) {
+    header.flex nav {
+        display: none;
+    }
+
+    header .menu {
+        display: block;
+    }
+}
